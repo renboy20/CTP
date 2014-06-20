@@ -155,7 +155,6 @@ namespace QuantBox.CSharp2CTP.Callback
 
         public virtual void Disconnect()
         {
-            IsConnected = false;
             // 不在这里停止消息队列
 
             //if (null != _MsgQueue && IntPtr.Zero != _MsgQueue)

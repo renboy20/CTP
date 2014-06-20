@@ -2086,16 +2086,11 @@ namespace QuantBox.CSharp2CTP
         /// 序号
         /// </summary>
         public int SequenceNo;
-        ///// <summary>
-        ///// 消息正文,由于不同地区，编码不同，出于正确提取结算单的需要，将string改成byte
-        ///// </summary>
-        //[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 501)]
-        //public string Content;
         /// <summary>
-        /// 消息正文，注意：Encoding转换时字符串后有0，需要移除
+        /// 消息正文
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 501)]
-        public byte[] Content;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 501)]
+        public string Content;
     }
 
     /// <summary>
